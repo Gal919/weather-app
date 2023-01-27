@@ -1,5 +1,5 @@
 import { UPDATE_CURRENT_CONDITION, UPDATE_TODAY_FORECAST, UPDATE_IS_LOADING, SET_ERROR } from './forecastActionTypes';
-const apiKey = '787ef6979c61d6b7319baed8a67fff72';
+import { fetchApi } from '../../api';
 
 export const setError = (error) => {
   return {
@@ -17,16 +17,8 @@ export const updateIsLoading = (isLoading) => {
 
 export const updateCurrentCondition = (city) => async (dispatch) => {
   try {
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
-    );
+    const data = await fetchApi(`weather?q=${city}&units=metric`);
 
-    if(!response.ok) {
-      throw new Error(setError('city not found'))
-    }
-   
-    const data = await response.json();
-  
     dispatch(updateIsLoading(false));
     dispatch({
       type: UPDATE_CURRENT_CONDITION,
@@ -38,16 +30,9 @@ export const updateCurrentCondition = (city) => async (dispatch) => {
   };
 };
 
-export const  updateTodayForecast = (city) => async (dispatch) => {
+export const updateTodayForecast = (city) => async (dispatch) => {
   try {
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&cnt=6&appid=${apiKey}`
-    );
-
-    if(!response.ok) {
-      throw new Error(setError('city not found'))
-    }
-    const data = await response.json();
+    const data = await fetchApi(`forecast?q=${city}&units=metric&cnt=6`);
 
     dispatch(updateIsLoading(false));
     dispatch({
