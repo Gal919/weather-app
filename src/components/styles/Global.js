@@ -1,4 +1,3 @@
-// import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
@@ -19,9 +18,3 @@ export const darkTheme = {
 export const lightTheme = {
     body: 'red'
 }
-
-// export const Container = styled.div`
-//     min-height: 100vh;
-//     background-color: ${prop => prop.theme.body};
-// `;
-
