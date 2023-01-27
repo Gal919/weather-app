@@ -7,8 +7,6 @@ import SearchBar from './components/SearchBar';
 import TodayForecast from './components/TodayForecast';
 
 const App = () => {
-  const currentForecast = useSelector(state => state.forecast.currentCondition);
-  const todayForecast = useSelector(state => state.forecast.todayForecast);
   const theme = useSelector(state => state.theme);
 
   return (
@@ -17,8 +15,8 @@ const App = () => {
         <GlobalStyles />
         <Header />
         <SearchBar />
-        {currentForecast.name && <CurrentForecast />}
-        {todayForecast.list && <TodayForecast />}
+        <CurrentForecast />
+        <TodayForecast />
       </ThemeProvider>
     </div>
   );
