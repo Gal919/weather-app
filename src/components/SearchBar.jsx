@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { updateCurrentCondition, updateTodayForecast } from '../store/forecast/forecastActions';
+import { updateCurrentCondition, updateTodayForecast, updateIsLoading } from '../store/forecast/forecastActions';
 import { Container, SearchContainer, Search } from './styles/SearchBar';
 
 const SearchBar = () => {
@@ -14,6 +14,7 @@ const SearchBar = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    dispatch(updateIsLoading(true));
     dispatch(updateCurrentCondition(city));
     dispatch(updateTodayForecast(city));
   };
