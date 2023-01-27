@@ -1,14 +1,12 @@
 import { useSelector } from 'react-redux';
-import SearchBar from './components/SearchBar'; 
-import CurrentForecast from './components/CurrentForecast';
-import TodayForecast from './components/TodayForecast';
-import Header from './components/Header';
 import { ThemeProvider } from 'styled-components';
+import CurrentForecast from './components/CurrentForecast';
 import { GlobalStyles } from './components/styles/Global';
-// import { Container } from './components/styles/Global';
+import Header from './components/Header';
+import SearchBar from './components/SearchBar'; 
+import TodayForecast from './components/TodayForecast';
 
 const App = () => {
-
   const currentForecast = useSelector(state => state.forecast.currentCondition);
   const todayForecast = useSelector(state => state.forecast.todayForecast);
   const theme = useSelector(state => state.theme);
