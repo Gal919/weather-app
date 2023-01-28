@@ -17,7 +17,8 @@ export const ResContiner = styled.div`
   border-radius: 20px;
 
   @media (max-width: 768px) {
-    width: 85%;
+    max-width: 90%;
+    padding: 0 10px 0 20px;
   };
 `;
 
