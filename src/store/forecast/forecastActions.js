@@ -19,7 +19,6 @@ export const updateCurrentCondition = (city) => async (dispatch) => {
   try {
     const data = await fetchApi(`weather?q=${city}&units=metric`);
 
-    dispatch(updateIsLoading(false));
     dispatch({
       type: UPDATE_CURRENT_CONDITION,
       payload: data,
@@ -34,7 +33,6 @@ export const updateTodayForecast = (city) => async (dispatch) => {
   try {
     const data = await fetchApi(`forecast?q=${city}&units=metric&cnt=6`);
 
-    dispatch(updateIsLoading(false));
     dispatch({
       type: UPDATE_TODAY_FORECAST,
       payload: data,
