@@ -10,7 +10,7 @@ export const ToggleSwitch = styled.label`
     input {
         type: checkbox;
         display: none;
-    }
+    };
 `;
 
 export const Switch = styled.span`
@@ -31,23 +31,19 @@ export const Switch = styled.span`
     top: 2px;
     width: 21px;
     height: 21px;
-    background-color: #333;
+    background-color: ${prop => prop.theme.primery};
     border-radius: 50%;
     transition: transform 0.3s ease;
-  }
+  };
 `;
 
 export const Input = styled.input`
   &:checked + ${Switch} {
     &:before {
       transform: translateX(25px);
-      background-color: #333;
-    }
-  }
-
-  &:checked + ${Switch} {
-    background-color: #2bc6ff;
-  }
+      background-color: ${prop => prop.theme.primery};
+    };
+  };
 `;
 
 

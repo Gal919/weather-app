@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Info from './Info';
+import { Container } from './styles/TodayForecast';
 
 const TodayForecast = () => {
   const todayForecast = useSelector(state => state.forecast.todayForecast);
@@ -8,11 +9,9 @@ const TodayForecast = () => {
   const error = useSelector(state => state.forecast.error);
   
   return (
-    <div>
-      {isLoading && <h3>Is Loading</h3>}
+    <Container>
       {!isLoading && todayForecast && !error && (
         <>
-          <h3>TODAY'S FORECAST</h3>
           {todayForecast.list.map((item) => (
             <Info
               key={item.dt}
@@ -23,7 +22,7 @@ const TodayForecast = () => {
           ))}
         </>
       )}
-    </div>
+    </Container>
   );
 };
 
