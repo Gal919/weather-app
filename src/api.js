@@ -8,7 +8,7 @@ export const fetchApi = async (url) => {
     if (response.statusText === 'Not Found') {
       throw new Error('City Name Not Found');
     } else {
-      throw new Error('Somthing Went Wrong');
+      throw new Error('Somthing Went Wrong :(');
     }
   }
 
