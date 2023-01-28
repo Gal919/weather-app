@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   position: relative;
   margin-top: 15px;
-  padding: 20px 40px;
+  padding: 20px 0;
 `;
 
 export const SearchContainer = styled.form`
@@ -14,7 +14,7 @@ export const SearchContainer = styled.form`
 `;
 
 export const Search = styled.input`
-  width: 50%;
+  min-width: 50%;
   height: 45px;
   margin-right: 10px;
   background-color: ${(prop) => prop.theme.background};

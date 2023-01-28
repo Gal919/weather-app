@@ -5,41 +5,43 @@ export const Container = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     min-height: 200px;
+    margin-top: 10px;
 `;
 
 export const ResContiner = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  min-width: 50%;
   padding-left: 30px;
   border: 1px solid ${(prop) => prop.theme.secondry};
   border-radius: 20px;
 
   @media (max-width: 768px) {
-    width: 90%;
+    width: 85%;
   };
 `;
 
 export const LeftSide = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-    h1 {
-        margin-bottom: 0;
-    };
-    
-    p {
-        margin-top: 0;
-    };
-   
-   
-    h3 {
-        font-size: 30px;
-    };
+  h1 {
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-top: 0;
+  }
 `;
 
 export const RightSide = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    img {
+      max-width: 150px;
+    }
+  };
 `;

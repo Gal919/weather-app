@@ -7,7 +7,8 @@ export const Container = styled.div`
   margin-top: 20px;
 
   @media (max-width: 768px) {
+    display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    margin: 20px 50px;
   };
 `;

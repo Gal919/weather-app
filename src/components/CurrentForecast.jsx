@@ -19,9 +19,9 @@ const CurrentForecast = () => {
           <LeftSide>
             <h1>{currentForecast.name}</h1>
             <p>{currentForecast.weather[0].description}</p>
-            <h3>
+            <h1>
               {Math.floor(currentForecast.main.temp)} {'\u00b0'}
-            </h3>
+            </h1>
           </LeftSide>
           <RightSide>
             <img
