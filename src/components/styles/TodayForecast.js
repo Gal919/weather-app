@@ -9,6 +9,6 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    margin: 20px 50px;
+    margin: 20px;
   };
 `;

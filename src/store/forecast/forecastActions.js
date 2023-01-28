@@ -31,7 +31,7 @@ export const updateCurrentCondition = (city) => async (dispatch) => {
 
 export const updateTodayForecast = (city) => async (dispatch) => {
   try {
-    const data = await fetchApi(`forecast?q=${city}&units=metric&cnt=6`);
+    const data = await fetchApi(`forecast?q=${city}&units=metric&cnt=7`);
 
     dispatch({
       type: UPDATE_TODAY_FORECAST,
