@@ -4,8 +4,8 @@ https://gal-weather-app.netlify.app
 
 - Today's weather app feching data from external API.
 - Using react, react-redux and redux-thunk.
-- For styling using Styled-Components.
-- Support Light/Dark Mode and Mobile Size
+- For styling using styled-components.
+- Support light/dark mode and mobile size
 
 ###### Web Display
 
