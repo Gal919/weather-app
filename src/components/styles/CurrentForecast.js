@@ -16,8 +16,8 @@ export const ResContiner = styled.div`
   border: 1px solid ${(prop) => prop.theme.secondry};
   border-radius: 20px;
 
-  @media (max-width: 768px) {
-    max-width: 90%;
+  @media (max-width: 480px) {
+    width: 85%;
     padding: 0 10px 0 20px;
   };
 `;
@@ -40,7 +40,7 @@ export const RightSide = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     img {
       max-width: 150px;
     }

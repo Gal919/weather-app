@@ -17,7 +17,7 @@ export const Title = styled.div`
     color: ${(prop) => prop.theme.primery};
   };
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
       h1 {
         font-size: 15px;
       }

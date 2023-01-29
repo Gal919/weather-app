@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
         color: ${(prop) => prop.theme.primery};
 
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
             ${Container} {
                 padding: 15px;
                 i {

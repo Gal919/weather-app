@@ -12,7 +12,7 @@ export const Container = styled.div`
     margin-bottom: 0;
   };
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     p {
         font-size: 15px;
     };
