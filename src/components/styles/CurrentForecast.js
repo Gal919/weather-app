@@ -17,8 +17,8 @@ export const ResContiner = styled.div`
   border-radius: 20px;
 
   @media (max-width: 480px) {
-    width: 85%;
-    padding: 0 10px 0 20px;
+    width: 80%;
+    padding: 10px 0px 10px 20px;
   };
 `;
 
@@ -42,7 +42,7 @@ export const RightSide = styled.div`
 
   @media (max-width: 480px) {
     img {
-      max-width: 150px;
+      max-width: 100%;
     }
   };
 `;
